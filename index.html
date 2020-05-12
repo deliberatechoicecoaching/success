@@ -26,7 +26,7 @@
             </div>
             <div class="ml-form-fieldRow ml-last-item">
               <div class="ml-field-group ml-field-company ml-validate-required">
-                <input type="text" class="form-control" data-inputmask="" name="fields[company]" placeholder="Company" autocomplete="">
+                <input id = "source" type="text" class="form-control" data-inputmask="" name="fields[company]" placeholder="Company" autocomplete="">
               </div>
             </div>
           </div>
@@ -48,6 +48,14 @@
 </div>
 <script>
   function ml_webform_success_2082282(){var r=ml_jQuery||jQuery;r(".ml-subscribe-form-2082282 .row-success").show(),r(".ml-subscribe-form-2082282 .row-form").hide()}
+  var x = document.referrer;
+  
+  if(x === ""){
+    document.getElementById("source").value = 'poli';
+}
+else{
+    document.getElementById("source").value = x;
+}
 </script>
 <img src="https://track.mailerlite.com/webforms/o/2082282/a0z2u9?vee71a8848f3cc4af6b2730283dbdc659" width="1" height="1" style="max-width:1px;max-height:1px;visibility:hidden;padding:0;margin:0;display:block" alt="." border="0">
 <script src="https://static.mailerlite.com/js/w/webforms.min.js?vee71a8848f3cc4af6b2730283dbdc659" type="text/javascript"></script>
