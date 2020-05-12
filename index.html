@@ -49,12 +49,20 @@
 <script>
   function ml_webform_success_2082282(){var r=ml_jQuery||jQuery;r(".ml-subscribe-form-2082282 .row-success").show(),r(".ml-subscribe-form-2082282 .row-form").hide()}
   var x = document.referrer;
-  
+  function getSecondPart(source) {
+      if (source.includes('?source=')){
+        return source.split('?source=')[1];
+      }
+      else{
+          return 'No';
+      }
+  }
+
   if(x === ""){
-    document.getElementById("source").value = 'poli';
+    document.getElementById("source").value = 'unknown';
 }
 else{
-    document.getElementById("source").value = x;
+    document.getElementById("source").value = getSecondPart(x);
 }
 </script>
 <img src="https://track.mailerlite.com/webforms/o/2082282/a0z2u9?vee71a8848f3cc4af6b2730283dbdc659" width="1" height="1" style="max-width:1px;max-height:1px;visibility:hidden;padding:0;margin:0;display:block" alt="." border="0">
