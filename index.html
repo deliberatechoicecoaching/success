@@ -48,8 +48,17 @@
 </div>
 <script>
   function ml_webform_success_2082282(){try{window.top.location.href="https://businessownerswell-beingbox.bitrix24.site/ThankYou/"}catch(i){window.location.href="https://businessownerswell-beingbox.bitrix24.site/ThankYou/"}} 
-  var x = document.referrer; function getSecondPart(source) { if (source.includes('?source=')){ return source.split('?source=')[1]; } else{ return 'No'; } } 
- if(x === ""){ document.getElementById("source").value = 'unknown'; } else{ document.getElementById("source").value = getSecondPart(x); }
+  var source_link = document.referrer; 
+  function getSource(source) { 
+    if (source.includes('?source=')){
+      return source.split('?source=')[1]; 
+    } else{ 
+      return 'Main Page'; 
+    } } 
+ if(source_link === "")
+ { document.getElementById("source").value = 'unknown'; 
+ } else
+ { document.getElementById("source").value = getSource(source_link); }
 </script>
 <img src="https://track.mailerlite.com/webforms/o/2082282/a0z2u9?vee71a8848f3cc4af6b2730283dbdc659" width="1" height="1" style="max-width:1px;max-height:1px;visibility:hidden;padding:0;margin:0;display:block" alt="." border="0">
 <script src="https://static.mailerlite.com/js/w/webforms.min.js?vee71a8848f3cc4af6b2730283dbdc659" type="text/javascript"></script>
